@@ -1,0 +1,9 @@
+AZ outage:
+- In a multi-AZ RTO is the time which takes to launch a new RDS instance, so RTO is 1-3 minutes for each single AZ outage. 
+- RPO is 0 because there is no data loss, during the failover from primary instance to secondary.
+
+Regional Problem:
+- The time to advertise the replica in the event of a single area outage, according to RTO. 
+- This will promote the replica for around 5mins. RPO is 10 mins because it is asynchronous cross-region.
+
+

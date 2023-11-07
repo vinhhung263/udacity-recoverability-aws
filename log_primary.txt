@@ -1,0 +1,41 @@
+[root@ip-10-1-11-226 ec2-user]# mysql -h database-1.cgswyxuq1beq.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 114
+Server version: 8.0.33 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use udacity
+Database changed
+MySQL [udacity]> CREATE TABLE user (id INT, name VARCHAR(20), email VARCHAR(50));
+Query OK, 0 rows affected (0.12 sec)
+
+MySQL [udacity]> SHOW TABLES;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| user              |
++-------------------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]> INSERT INTO user (id,name,email) VALUES(1,"hungpv15","hungpv15@fpt.com");
+Query OK, 1 row affected (0.02 sec)
+
+MySQL [udacity]> INSERT INTO user (id,name,email) VALUES(2,"hungpv16","hungpv16@fpt.com");
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [udacity]> INSERT INTO user (id,name,email) VALUES(3,"hungpv17","hungpv17@fpt.com");
+Query OK, 1 row affected (0.12 sec)
+
+MySQL [udacity]> SELECT * FROM user;
++------+---------+-------------------+
+| id   | name    | email             |
++------+---------+-------------------+
+|    1 | hungpv15 | hungpv15@fpt.com |
+|    2 | hungpv16 | hungpv16@fpt.com |
+|    3 | hungpv17 | hungpv17@fpt.com |
++------+---------+-------------------+
+3 rows in set (0.00 sec)
